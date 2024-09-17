@@ -795,12 +795,15 @@ section,
   margin: 0;
   font-size: 48px;
   font-weight: 700;
+  color: #a39f9e;
+  text-shadow: 2px 2px 2px #000000;
 }
 
 .hero p {
   margin: 10px 0 0 0;
   font-size: 24px;
-  color: var(--heading-color);
+  color: #a39f9e;
+  text-shadow: 2px 2px 2px #000000;
 }
 
 .hero .btn-get-started {
