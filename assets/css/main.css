@@ -905,6 +905,89 @@ section,
   margin-bottom: 0;
 }
 
+.about-5 {
+  
+  .content {
+    h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 10px 0 0 0;
+        display: flex;
+      }
+      
+      i {
+        color: var(--accent-color);
+        margin-right: 0.5rem;
+        line-height: 1.2;
+        font-size: 1.25rem;
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+    
+  }
+
+  .pulsating-play-btn {
+    position: absolute;
+    left: calc(50% - 47px);
+    top: calc(50% - 47px);
+  }
+
+}
+
+.about-6 {
+
+  h3 {
+    font-weight: 700;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .fst-italic {
+    color: color-mix(in srgb, var(--default-color), var(--contrast-color) 50%);
+  }
+
+  .content {
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        padding: 0 0 10px 30px;
+        position: relative;
+      }
+      i {
+        position: absolute;
+        font-size: 20px;
+        left: 0;
+        top: -3px;
+        color: var(--accent-color);
+      }
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+    
+  }
+  
+  .pulsating-play-btn {
+    position: absolute;
+    left: calc(50% - 47px);
+    top: calc(50% - 47px);
+  }
+
+}
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
@@ -934,6 +1017,52 @@ section,
   color: var(--accent-color);
   line-height: 0;
 }
+
+.gallery {
+  overflow: hidden;
+
+  .swiper-wrapper {
+    height: auto;
+  }
+
+  .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  
+    .swiper-pagination-bullet {
+      background-color: var(--background-color);
+      border: 1px solid var(--accent-color);
+      width: 12px;
+      height: 12px;
+      opacity: 1;
+    }
+  
+    .swiper-pagination-bullet-active {
+      background-color: var(--accent-color);
+    }
+  }
+
+  .swiper-slide-active {
+    text-align: center;
+  }
+
+  @media (min-width: 992px) {
+    .swiper-wrapper {
+      padding: 40px 0;
+    }
+
+    .swiper-slide-active {
+      background: var(--background-color);
+      border: 6px solid var(--accent-color);
+      padding: 4px;
+      z-index: 1;
+      transform: scale(1.2);
+      transition: none;
+    }
+  }
+}
+
+
 
 /*--------------------------------------------------------------
 # Skills Section
@@ -1118,52 +1247,35 @@ section,
   margin-bottom: 20px;
 }
 
-.resume .resume-item {
-  padding: 0 0 20px 20px;
-  margin-top: -2px;
-  border-left: 2px solid var(--accent-color);
-  position: relative;
-}
-
-.resume .resume-item h4 {
-  line-height: 18px;
-  font-size: 18px;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-bottom: 10px;
-}
-
-.resume .resume-item h5 {
+.resumeButton {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
   font-size: 16px;
-  padding: 5px 15px;
-  display: inline-block;
-  font-weight: 600;
-  margin-bottom: 10px;
-}
+  letter-spacing: 1px;
+  padding: 10px 28px;
+  border-radius: 5px;
+  transition:  0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 
-.resume .resume-item ul {
-  padding-left: 20px;
-}
+  
+  i {
+    font-size: 18px;
+    margin-left: 5px;
+    line-height: 0;
+    transition: 0.3s;
+  }
 
-.resume .resume-item ul li {
-  padding-bottom: 10px;
-}
+  &:hover {
+    background: color-mix(in srgb, var(--accent-color), transparent 20%);
+    i {
+      transform: translate(5px, 0);
+    }
+  }
 
-.resume .resume-item:last-child {
-  padding-bottom: 0;
-}
-
-.resume .resume-item::before {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50px;
-  left: -9px;
-  top: 0;
-  background: var(--background-color);
-  border: 2px solid var(--accent-color);
 }
 
 /*--------------------------------------------------------------
